@@ -1,0 +1,4 @@
+nasm -f bin boot.asm -o boot.bin
+sudo umount /dev/sdb*
+sudo dd if=boot.bin of=/dev/sdb bs=512 status=progress conv=fsync
+sync
